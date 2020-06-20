@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var next: UIButton!
+    
+    @IBOutlet weak var nextBt: UIButton!
+    
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var playStop: UIButton!
     var displayImageNo = 0
@@ -20,7 +22,7 @@ class ViewController: UIViewController {
         if self.timer != nil {
             timer.invalidate()
             self.timer = nil
-            next.isEnabled = true
+            nextBt.isEnabled = true
             back.isEnabled = true
             playStop.setTitle("再生", for: .normal)
         }
@@ -38,22 +40,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let image = UIImage(named: "image0")
         imageView.image = image
-    }
-
-        var displayImageNo = 0
         
-
-        let imageNameArray = ["image0", "image1", "image2"]
-
-
-        func displayImage() {
+    }
+    func displayImage() {
     
             let name = imageNameArray[displayImageNo]
             
             let image = UIImage(named: name)
             imageView.image = image
         }
-    @IBAction func next(_ sender: Any) {
+    @IBAction func nextBt(_ sender: Any) {
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
         if displayImageNo < imageNameArray.count - 1 {
             displayImageNo += 1
@@ -83,14 +79,14 @@ class ViewController: UIViewController {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0,
                target: self, selector:#selector(updateTimer(_:)), userInfo: nil, repeats: true)
-            next.isEnabled = false
+            nextBt.isEnabled = false
             back.isEnabled = false
             playStop.setTitle("停止", for: .normal)
             
         } else if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
-            next.isEnabled = true
+            nextBt.isEnabled = true
             back.isEnabled = true
             playStop.setTitle("再生", for: .normal)
             

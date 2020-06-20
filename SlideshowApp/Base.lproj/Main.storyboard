@@ -19,7 +19,7 @@
                                 <rect key="frame" x="140.5" y="54" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYa-5h-cnH"/>
+                                    <action selector="nextBt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2J-8c-gcT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtD-pk-lRD">
@@ -55,9 +55,8 @@
                     </view>
                     <connections>
                         <outlet property="back" destination="QtD-pk-lRD" id="cBx-eX-82k"/>
-                        <outlet property="displayImageView" destination="eJf-rv-OB3" id="qDZ-xS-EK2"/>
                         <outlet property="imageView" destination="eJf-rv-OB3" id="nuK-JD-ltG"/>
-                        <outlet property="next" destination="z2x-mg-zOX" id="cnQ-f6-ibI"/>
+                        <outlet property="nextBt" destination="z2x-mg-zOX" id="Vi2-au-aLO"/>
                         <outlet property="playStop" destination="Bqu-Fa-0qJ" id="HCv-TE-uJo"/>
                         <outlet property="tap" destination="tyE-fN-htk" id="e0l-pI-1Mw"/>
                         <segue destination="rbz-tE-8Ag" kind="show" identifier="Result" id="G52-u0-vSP"/>
@@ -70,7 +69,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-258" y="352"/>
+            <point key="canvasLocation" x="-355" y="1046"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="WcT-ca-8fH">
@@ -104,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8E-lU-UWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="360"/>
+            <point key="canvasLocation" x="433" y="1046"/>
         </scene>
     </scenes>
 </document>

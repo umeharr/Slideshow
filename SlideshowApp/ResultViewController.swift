@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = selectedImg
+        play.image = selectedImage
         
     }
     
