@@ -18,15 +18,10 @@ class ViewController: UIViewController {
     var displayImageNo = 0
     var timer: Timer!
     let imageNameArray = ["image0", "image1", "image2"]
+    
     @IBAction func tap(_ sender: Any) {
-        if self.timer != nil {
-            timer.invalidate()
-            self.timer = nil
-            nextBt.isEnabled = true
-            back.isEnabled = true
-            playStop.setTitle("再生", for: .normal)
-        }
         self.performSegue(withIdentifier: "Result", sender: nil)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
@@ -50,7 +45,6 @@ class ViewController: UIViewController {
             imageView.image = image
         }
     @IBAction func nextBt(_ sender: Any) {
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
         if displayImageNo < imageNameArray.count - 1 {
             displayImageNo += 1
             displayImage()

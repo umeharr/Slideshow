@@ -4,7 +4,7 @@
 //
 //  Created by user on 2020/05/28.
 //  Copyright © 2020 chizku.umehara. All rights reserved.
-//
+//s
 
 import UIKit
 
@@ -12,10 +12,14 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var play: UIImageView!
     var selectedImage: UIImage!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        play.image = selectedImage
-        
+    @IBOutlet weak var bacjkButton: UIButton!
+    @IBAction func bacjkButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        }
+override func viewDidLoad() {
+    super.viewDidLoad()
+    play.image = selectedImage
+    
     }
     
     
