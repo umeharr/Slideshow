@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var playStop: UIButton!
     var displayImageNo = 0
+    var displaySameImage = displayImage
     var timer: Timer!
     let imageNameArray = ["image0", "image1", "image2"]
-    
+    var selectImage:UIImage?
     @IBAction func tap(_ sender: Any) {
         self.performSegue(withIdentifier: "Result", sender: nil)
         

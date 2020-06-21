@@ -16,6 +16,16 @@ class ResultViewController: UIViewController {
     @IBAction func bacjkButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         }
+    var displayImageNo = 0
+    var timer: Timer!
+    let imageNameArray = ["image0", "image1", "image2"]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController:ViewController = segue.destination as! ViewController
+        let name = imageNameArray[displayImageNo]
+        let image = UIImage(named: name)
+        viewController.selectedImage = image
+        
+    }
 override func viewDidLoad() {
     super.viewDidLoad()
     play.image = selectedImage
